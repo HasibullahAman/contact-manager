@@ -4,6 +4,7 @@ const App = () => {
   return (
     <div className="App">
       <h3>مدریت مخاطبین</h3>
+      <button className='btn btn-primary'>Button</button>
     </div>
   );
 }
