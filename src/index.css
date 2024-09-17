@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  font-family: "Vazir", 'tahoma', 'ubuntu';
+  font-family: "Vazir", 'tahoma', 'ubuntu' !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

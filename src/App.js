@@ -1,12 +1,10 @@
 import './App.css';
+import Navbar  from './components/Navbar';
 
 const App = () => {
   return (
     <div className="App">
-      <h3 style={{fontFamily: "Vazir"}}>مدریت مخاطبین</h3>
-      <button className='btn btn-primary'>Button</button>
-      <span className='fa fa-user'></span>
-      <span className='fas fa-address-book'></span>
+      <Navbar />
     </div>
   );
 }
