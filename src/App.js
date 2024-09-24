@@ -1,5 +1,13 @@
 import "./App.css";
-import {AddContact, EditContact, SearchContact ,Contacts, Navbar , Spinner} from './components/'
+import { Route, Routes, Navigate, useNavigate } from "react-router-dom";
+import {
+  AddContact,
+  EditContact,
+  SearchContact,
+  Contacts,
+  Navbar,
+  Spinner,
+} from "./components/";
 import { useState } from "react";
 
 const App = () => {
@@ -8,7 +16,11 @@ const App = () => {
   return (
     <div className="App">
       <Navbar />
-      <Contacts contacts={getContacts} loading={loading}/>
+      <Routes>
+        <Route path="/" element={<Navigate to="/contacts" />} />{" "}
+        {/* we redirect root page to contact  page and Navigate is a component from useNavigate hook */}
+      </Routes>
+      {/* <Contacts contacts={getContacts} loading={loading} /> */}
     </div>
   );
 };
