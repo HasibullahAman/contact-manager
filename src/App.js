@@ -1,5 +1,5 @@
 import "./App.css";
-import { Route, Routes, Navigate, useNavigate } from "react-router-dom";
+import { Route, Routes, Navigate } from "react-router-dom";
 import {
   AddContact,
   EditContact,
@@ -7,6 +7,7 @@ import {
   Contacts,
   Navbar,
   Spinner,
+  ViewContact,
 } from "./components/";
 import { useState } from "react";
 
@@ -19,9 +20,16 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Navigate to="/contacts" />} />{" "}
         {/* we redirect root page to contact  page and Navigate is a component from useNavigate hook */}
+        <Route
+          path="/contacts"
+          element={<Contacts contacts={getContacts} loading={loading} />}
+        />
+        <Route path="/contacts/add" element={<AddContact />} />
+        <Route path="/contacts/:contactId" element={<ViewContact />} />
+        <Route path="/contacts/edit/:contactId" element={<EditContact />} />
+        {/* <Contacts contacts={getContacts} loading={loading} /> */}
       </Routes>
-      {/* <Contacts contacts={getContacts} loading={loading} /> */}
-    </div>
+    </div>  
   );
 };
 
