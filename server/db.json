@@ -1,0 +1,44 @@
+{
+  "contacts": [
+    {
+      "id": "6903",
+      "fullName": "Hasibullah Aman",
+      "photo": "https://avatars.githubusercontent.com/u/62972346?v=4",
+      "mobail": "0093799757131",
+      "email": "hasib.aman7@gamil.com",
+      "job": "Devloper",
+      "group": 1
+    },
+    {
+      "id": "1546",
+      "fullName": "Nawidullah Aman",
+      "photo": "https://i.pinimg.com/236x/ea/4b/47/ea4b474c5392b809224a060beb2a0b1c.jpg",
+      "mobail": "0093799757131",
+      "email": "nawid.aman7@gamil.com",
+      "job": "worker",
+      "group": 1
+    }
+  ],
+  "groups": [
+    {
+      "id": "1",
+      "name": "همکار"
+    },
+    {
+      "id": "2",
+      "name": "دوست"
+    },
+    {
+      "id": "3",
+      "name": "فامیل"
+    },
+    {
+      "id": "4",
+      "name": "آشنا"
+    },
+    {
+      "id": "4",
+      "name": "خدمات"
+    }
+  ]
+}

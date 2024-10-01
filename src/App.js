@@ -3,10 +3,10 @@ import { Route, Routes, Navigate } from "react-router-dom";
 import {
   AddContact,
   EditContact,
-  SearchContact,
+  // SearchContact,
   Contacts,
   Navbar,
-  Spinner,
+  // Spinner,
   ViewContact,
 } from "./components/";
 import { useState } from "react";
