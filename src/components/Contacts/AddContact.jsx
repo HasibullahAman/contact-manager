@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 import { Spinner } from "../";
-import {COMMENT, GREEN, PURPLE } from '../../helpers/color' 
+import { COMMENT, GREEN, PURPLE } from "../../helpers/color";
 
 const AddContact = ({
   loading,
@@ -10,7 +10,7 @@ const AddContact = ({
   groups,
   createContactForm,
 }) => {
-  return ( 
+  return (
     <>
       {loading ? (
         <Spinner />
@@ -96,7 +96,7 @@ const AddContact = ({
                         onChange={setContactInfo}
                         className="form-control"
                         required={true}
-                        placeholder="وظیفه"
+                        placeholder="شغل"
                       />
                     </div>
                     <div className="mb-2">
@@ -128,7 +128,7 @@ const AddContact = ({
                         className="btn mx-2"
                         style={{ backgroundColor: COMMENT }}
                       >
-                        برگشت{" "}
+                        انصراف
                       </Link>
                     </div>
                   </form>

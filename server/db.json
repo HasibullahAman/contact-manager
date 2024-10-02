@@ -2,7 +2,7 @@
   "contacts": [
     {
       "id": "6903",
-      "fullName": "Hasibullah Aman",
+      "fullName": "حسیب الله امان",
       "photo": "https://avatars.githubusercontent.com/u/62972346?v=4",
       "mobail": "0093799757131",
       "email": "hasib.aman7@gamil.com",
@@ -11,7 +11,7 @@
     },
     {
       "id": "1546",
-      "fullName": "Nawidullah Aman",
+      "fullName": "Mustafa Mirzad",
       "photo": "https://avatars.githubusercontent.com/u/71199539?v=4",
       "mobail": "0093799757131",
       "email": "nawid.aman7@gamil.com",
@@ -19,13 +19,22 @@
       "group": 1
     },
     {
-      "id": "fe90",
-      "fullname": "حکمت الله محمدی",
-      "photo": "https://media.licdn.com/dms/image/v2/C4D03AQFvtxZ6xU8hpA/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1646272282356?e=1733356800&v=beta&t=6aUKw2__ATvndCT5HtYwxRqUSGUqiTANBOTRhhZVG_Q",
-      "mobile": "0799757131",
-      "email": "hasib.aman7@gmail.com",
-      "job": "AbabProgrammer",
-      "group": "1"
+      "id": "39bf",
+      "fullname": "Hikmatullah Mohammadi",
+      "photo": "https://avatars.githubusercontent.com/u/70486343?v=4",
+      "mobile": "0799876532",
+      "email": "hikmatullah.mohammadi@gamil.com",
+      "job": "Abab Programmer",
+      "group": "2"
+    },
+    {
+      "id": "0e15",
+      "fullname": "حسیب الله امان",
+      "photo": "https://avatars.githubusercontent.com/u/62972346?v=4",
+      "mobile": "0789765423",
+      "email": "hasib.aman8@gamil.com",
+      "job": "ندارد",
+      "group": "3"
     }
   ],
   "groups": [

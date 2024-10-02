@@ -1,14 +1,8 @@
-import {
-  CURRENTLINE,
-  CYAN,
-  ORANGE,
-  PINK,
-  PURPLE,
-  RED,
-} from "../../helpers/color";
+import { Link } from "react-router-dom";
+
 import Contact from "./Contact";
 import Spinner from "../Spinner";
-import { Link } from "react-router-dom";
+import { CURRENTLINE, ORANGE, PINK } from "../../helpers/color";
 
 const Contacts = ({ contacts, loading }) => {
   return (
@@ -24,7 +18,7 @@ const Contacts = ({ contacts, loading }) => {
                   style={{ backgroundColor: PINK }}
                 >
                   ساخت مخاطب جدید
-                  <i className="fa fa-plus-circle mx-2"></i>
+                  <i className="fa fa-plus-circle mx-2" />
                 </Link>
               </p>
             </div>
@@ -37,18 +31,18 @@ const Contacts = ({ contacts, loading }) => {
         <section className="container">
           <div className="row">
             {contacts.length > 0 ? (
-              contacts.map((c) => <Contact key={c.id} contacts={c} />)
+              contacts.map((c) => <Contact key={c.id} contact={c} />)
             ) : (
               <div
                 className="text-center py-5"
                 style={{ backgroundColor: CURRENTLINE }}
               >
                 <p className="h3" style={{ color: ORANGE }}>
-                  مخاطب یافت نگردید
+                  مخاطب یافت نشد ...
                 </p>
                 <img
                   src={require("../../assets/no-found.gif")}
-                  alt="دریافت نگردید"
+                  alt="پیدا نشد"
                   className="w-25"
                 />
               </div>
