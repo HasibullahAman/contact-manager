@@ -21,6 +21,7 @@ const App = () => {
   const [loading, setLoading] = useState(false);
   const [getContacts, setContacts] = useState([]);
   const [getGroups, setGroups] = useState([]);
+  const [forceRender, setForceRender] = useState(false);
   const [getContact, setContact] = useState({
     fullname: "",
     photo: "",
@@ -53,6 +54,22 @@ const App = () => {
     fetchData();
   }, []);
 
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        setLoading(true);
+        const { data: contactsData } = await getAllContacts();
+        setContacts(contactsData);
+        setLoading(false);
+      } catch (err) {
+        console.log(err.message);
+        setLoading(false);
+      }
+    };
+
+    fetchData();
+  }, [setForceRender]);
+
   const createContactForm = async (event) => {
     event.preventDefault();
     try {
@@ -60,6 +77,7 @@ const App = () => {
 
       if (status === 201) {
         setContact({});
+        setForceRender(!forceRender);
         navigate("/contacts");
       }
     } catch (err) {
