@@ -3,17 +3,17 @@ import { Navigate, Route, Routes, useNavigate } from "react-router-dom";
 
 import {
   AddContact,
-  Contact,
   Contacts,
   EditContact,
   Navbar,
+  ViewContact,
 } from "./components";
 
 import {
   getAllContacts,
   getAllGroups,
   createContact,
-} from "./services/constactServices";
+} from "./services/contactServices";
 
 import "./App.css";
 
@@ -113,7 +113,7 @@ const App = () => {
             />
           }
         />
-        <Route path="/contacts/:contactId" element={<Contact />} />
+        <Route path="/contacts/:contactId" element={<ViewContact />} />
         <Route path="/contacts/edit/:contactId" element={<EditContact />} />
       </Routes>
     </div>

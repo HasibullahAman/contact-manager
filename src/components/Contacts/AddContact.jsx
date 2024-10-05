@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 import { Spinner } from "../";
-import { COMMENT, GREEN, PURPLE } from "../../helpers/color";
+import { COMMENT, GREEN, PURPLE } from "../../helpers/colors";
 
 const AddContact = ({
   loading,

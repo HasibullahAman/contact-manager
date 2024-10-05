@@ -20,12 +20,23 @@
     },
     {
       "id": "417a",
-      "fullname": "حکمت الله محمدی",
+      "fullname": [
+        "حکمت الله احمدی"
+      ],
       "photo": "https://avatars.githubusercontent.com/u/70486343?v=4",
       "mobile": "0797654321",
       "email": "hikmatullah@gmail.com",
       "job": "AbabProgrammer",
       "group": "2"
+    },
+    {
+      "id": "e896",
+      "fullname": "روح الله اکبری",
+      "photo": "https://avatars.githubusercontent.com/u/54434823?v=4",
+      "mobile": "7976897678",
+      "email": "rohullah@gmail.com",
+      "job": "AWCC",
+      "group": "3"
     }
   ],
   "groups": [

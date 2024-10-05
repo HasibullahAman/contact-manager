@@ -1,4 +1,5 @@
-import { CURRENTLINE, CYAN, ORANGE, PURPLE, RED } from "../../helpers/color";
+import { CURRENTLINE, CYAN, ORANGE, PURPLE, RED } from "../../helpers/colors";
+import { Link } from "react-router-dom";
 
 const Contact = ({ contact }) => {
   return (
@@ -33,13 +34,13 @@ const Contact = ({ contact }) => {
               </ul>
             </div>
             <div className="col-md-1 col-sm-1 d-flex flex-column align-items-center">
-              <button className="btn my-1" style={{ backgroundColor: ORANGE }}>
+              <Link to = {`/contacts/${contact.id}`}  className="btn my-1" style={{ backgroundColor: ORANGE }}>
                 <i className="fa fa-eye" />
-              </button>
+              </Link>
 
-              <button className="btn my-1" style={{ backgroundColor: CYAN }}>
+              <Link to={`/contacts/edit/${contact.id}`} className="btn my-1" style={{ backgroundColor: CYAN }}>
                 <i className="fa fa-pen" />
-              </button>
+              </Link>
               <button className="btn my-1" style={{ backgroundColor: RED }}>
                 <i className="fa fa-trash" />
               </button>

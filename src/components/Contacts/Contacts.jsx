@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 import Contact from "./Contact";
 import Spinner from "../Spinner";
-import { CURRENTLINE, ORANGE, PINK } from "../../helpers/color";
+import { CURRENTLINE, ORANGE, PINK } from "../../helpers/colors";
 
 const Contacts = ({ contacts, loading }) => {
   return (

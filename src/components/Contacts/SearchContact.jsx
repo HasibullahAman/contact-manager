@@ -1,4 +1,4 @@
-import { PURPLE} from "../../helpers/color";
+import { PURPLE} from "../../helpers/colors";
 
 
 const SearchContact = () => {
