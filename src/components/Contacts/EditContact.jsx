@@ -6,11 +6,11 @@ import {
   getContact,
   getAllGroups,
   updateContact,
-} from "../../services/contactServices";
+} from "../../services/contactService";
 import { Spinner } from "../";
 import { COMMENT, ORANGE, PURPLE } from "../../helpers/colors";
 
-const EditContact = () => {
+const EditContact = ({ forceRender, setForceRender }) => {
   const { contactId } = useParams();
   const navigate = useNavigate();
 
@@ -65,6 +65,7 @@ const EditContact = () => {
       const { data } = await updateContact(state.contact, contactId);
       setState({ ...state, loading: false });
       if (data) {
+        setForceRender(!forceRender);
         navigate("/contacts");
       }
     } catch (err) {
@@ -181,7 +182,7 @@ const EditContact = () => {
                         className="btn mx-2"
                         style={{ backgroundColor: COMMENT }}
                       >
-                        انصراف
+                        برگشت
                       </Link>
                     </div>
                   </form>
@@ -189,7 +190,7 @@ const EditContact = () => {
                 <div className="col-md-4">
                   <img
                     src={contact.photo}
-                    alt="contact.photo"
+                    alt="contact-photo"
                     className="img-fluid rounded"
                     style={{ border: `1px solid ${PURPLE}` }}
                   />

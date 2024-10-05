@@ -2,7 +2,9 @@
   "contacts": [
     {
       "id": "d422",
-      "fullname": "حسیب الله امان",
+      "fullname": [
+        "حسیب الله امان "
+      ],
       "photo": "https://avatars.githubusercontent.com/u/62972346?v=4",
       "mobile": "0799757131",
       "email": "hasib.aman7@gmail.com",
@@ -21,7 +23,7 @@
     {
       "id": "417a",
       "fullname": [
-        "حکمت الله احمدی"
+        "حکمت الله محمدی"
       ],
       "photo": "https://avatars.githubusercontent.com/u/70486343?v=4",
       "mobile": "0797654321",

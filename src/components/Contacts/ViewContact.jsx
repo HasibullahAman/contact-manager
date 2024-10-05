@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 
 import { Link, useParams } from "react-router-dom";
 
-import { getContact, getGroup } from "../../services/contactServices";
+import { getContact, getGroup } from "../../services/contactService";
 import { Spinner } from "../";
 import { CURRENTLINE, CYAN, PURPLE } from "../../helpers/colors";
 
