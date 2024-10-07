@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Navigate, Route, Routes, useNavigate } from "react-router-dom";
+import { confirmAlert } from "react-confirm-alert";
 
 import {
   AddContact,
@@ -91,6 +92,9 @@ const App = () => {
       [event.target.name]: event.target.value,
     });
   };
+
+
+  
 
   return (
     <div className="App">
