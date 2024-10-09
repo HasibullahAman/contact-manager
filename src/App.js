@@ -24,12 +24,14 @@ import {
   PURPLE,
   YELLOW,
   COMMENT,
+  RED,
 } from "./helpers/colors";
 
 const App = () => {
   const [loading, setLoading] = useState(false);
   const [forceRender, setForceRender] = useState(false);
   const [getContacts, setContacts] = useState([]);
+  const [getFilteredContacts, setFilteredContacts] = useState([]);
   const [getGroups, setGroups] = useState([]);
   const [getContact, setContact] = useState({
     fullname: "",
@@ -39,6 +41,7 @@ const App = () => {
     job: "",
     group: "",
   });
+  const [query, setQuery] = useState({ text: "" });
 
   const navigate = useNavigate();
 
@@ -51,6 +54,7 @@ const App = () => {
         const { data: groupsData } = await getAllGroups();
 
         setContacts(contactsData);
+        setFilteredContacts(contactsData);
         setGroups(groupsData);
 
         setLoading(false);
@@ -119,8 +123,9 @@ const App = () => {
           >
             <h1 style={{ color: YELLOW }}>پاک کردن مخاطب</h1>
             <p style={{ color: FOREGROUND }}>
-              مطمئنی که میخوای مخاطب {contactFullname} رو پاک کنی ؟
+              میخواهد <span style={{color:RED}}>{contactFullname}</span> را از دفترچه پاک کنید؟
             </p>
+            
             <button
               onClick={() => {
                 removeContact(contactId);
@@ -129,7 +134,7 @@ const App = () => {
               className="btn mx-2"
               style={{ backgroundColor: PURPLE }}
             >
-              مطمئن هستم
+              حذف
             </button>
             <button
               onClick={onClose}
@@ -159,16 +164,28 @@ const App = () => {
     }
   };
 
+  const contactSearch = (event) => {
+    setQuery({ ...query, text: event.target.value });
+    // const allContacts = getContacts.filter((contact) => {
+    //   return contact.fullname
+    //     .toLowerCase
+    //     .includes(event.target.value.toLowerCase());
+    // });
+    const allContacts = getContacts.filter((contact) => {
+      return contact.fullname?.toString().toLowerCase().includes(event.target.value.toLowerCase())}); 
+    setFilteredContacts(allContacts);
+  };
+
   return (
     <div className="App">
-      <Navbar />
+      <Navbar query={query} search={contactSearch} />
       <Routes>
         <Route path="/" element={<Navigate to="/contacts" />} />
         <Route
           path="/contacts"
           element={
             <Contacts
-              contacts={getContacts}
+              contacts={getFilteredContacts}
               loading={loading}
               confirmDelete={confirm}
             />
