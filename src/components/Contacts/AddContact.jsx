@@ -85,7 +85,7 @@ const AddContact = ({
                         onChange={setContactInfo}
                         className="form-control"
                         required={true}
-                        placeholder="آدرس ایمیل"
+                        placeholder="ایمیل"
                       />
                     </div>
                     <div className="mb-2">
@@ -96,7 +96,7 @@ const AddContact = ({
                         onChange={setContactInfo}
                         className="form-control"
                         required={true}
-                        placeholder="شغل"
+                        placeholder="وظیفه"
                       />
                     </div>
                     <div className="mb-2">

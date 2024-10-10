@@ -24,7 +24,9 @@
       "id": "e896",
       "fullname": "روح الله اکبری",
       "photo": "https://avatars.githubusercontent.com/u/54434823?v=4",
-      "mobile": "7976897678",
+      "mobile": [
+        "07976897678"
+      ],
       "email": "rohullah@gmail.com",
       "job": "AWCC",
       "group": "3"
@@ -39,6 +41,15 @@
       "email": "hasib.aman7@gmail.com",
       "job": "ندارد",
       "group": "1"
+    },
+    {
+      "id": "874e",
+      "fullname": "Chandan Gupta",
+      "photo": "https://avatars.githubusercontent.com/u/65088027?v=4",
+      "mobile": "0098765467",
+      "email": "chandanguptabsb@gmail.com",
+      "job": "Full Stack Developer",
+      "group": "2"
     }
   ],
   "groups": [

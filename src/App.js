@@ -125,7 +125,6 @@ const App = () => {
             <p style={{ color: FOREGROUND }}>
               میخواهد <span style={{color:RED}}>{contactFullname}</span> را از دفترچه پاک کنید؟
             </p>
-            
             <button
               onClick={() => {
                 removeContact(contactId);
@@ -172,7 +171,11 @@ const App = () => {
     //     .includes(event.target.value.toLowerCase());
     // });
     const allContacts = getContacts.filter((contact) => {
-      return contact.fullname?.toString().toLowerCase().includes(event.target.value.toLowerCase())}); 
+      return contact.fullname
+        ?.toString()
+        .toLowerCase()
+        .includes(event.target.value.toLowerCase());
+    });
     setFilteredContacts(allContacts);
   };
 
@@ -219,3 +222,5 @@ const App = () => {
 };
 
 export default App;
+
+
