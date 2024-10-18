@@ -2,12 +2,16 @@
   "contacts": [
     {
       "id": "2fd0",
-      "fullname": "مصطفی میرزاد",
+      "fullname": [
+        "مصطفی میرزاد"
+      ],
       "photo": "https://avatars.githubusercontent.com/u/71199539?v=4",
       "mobile": "0798765432",
       "email": "mustafa.mirzd@gmail.com",
       "job": "Frontend Dveloper",
-      "group": "2"
+      "group": [
+        "2"
+      ]
     },
     {
       "id": "417a",
