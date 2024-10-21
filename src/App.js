@@ -62,14 +62,29 @@ const App = () => {
   const createContactForm = async (event) => {
     event.preventDefault();
     try {
-      const { status } = await createContact(contact);
+      setLoading((prevLoding) => !prevLoding);
+      const { status, data } = await createContact(contact);
+
+      /*
+      Note: 
+       ::: for rendering contacts page we have many methods
+          1- Rerender --> forecRender, setForceRender
+          2- setContact(data) we deStracture data as json also and when a contact is created it will be rendered
+      */
 
       if (status === 201) {
+        const allContacts = [... contacts, data];
+
+        setContacts(allContacts);
+        setFilteredContacts([allContacts]);
+
         setContact({});
+        setLoading((prevLoding) => !prevLoding);
         navigate("/contacts");
       }
     } catch (err) {
       console.log(err.message);
+      setLoading((prevLoding) => !prevLoding);
     }
   };
 
@@ -172,28 +187,8 @@ const App = () => {
         <Navbar />
         <Routes>
           <Route path="/" element={<Navigate to="/contacts" />} />
-          <Route
-            path="/contacts"
-            element={
-              <Contacts
-                contacts={filteredContact}
-                loading={loading}
-                confirmDelete={confirmDelete}
-              />
-            }
-          />
-          <Route
-            path="/contacts/add"
-            element={
-              <AddContact
-                loading={loading}
-                setContactInfo={onContactChange}
-                contact={contact}
-                groups={groups}
-                createContactForm={createContactForm}
-              />
-            }
-          />
+          <Route path="/contacts" element={<Contacts />} />
+          <Route path="/contacts/add" element={<AddContact />} />
           <Route path="/contacts/:contactId" element={<ViewContact />} />
           <Route path="/contacts/edit/:contactId" element={<EditContact />} />
         </Routes>
